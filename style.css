@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+
+header {
+    text-align: center;
+    background-color: #76E1A0;
+    color: #fff;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.input-container {
+    text-align: center;
+    margin-top: 3rem;
+    color: #76E1A0;
+}
+
+.input-container div {
+    max-width: 520px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+input {
+    border: 1px solid #76E1A0;
+    padding: 0.6rem;
+    width: 100%;
+    text-align: left;
+}
+
+.input-container button {
+    border: none;
+    background-color: #76E1A0;
+    color: #fff;
+    width: 80px;
+    padding: 0.6rem;
+    align-self: flex-end;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.input-container button:hover {
+    background-color: #68C68D;
+}
+
+.items-container {
+    margin-top: 5rem;
+}
+
+ul {
+    max-width: 520px;
+    padding: 0 20px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+li {
+    padding: 20px;
+}
+
+.items-container div {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    align-items: center;
+    border: 1px solid #707070;
+    border-top: 0;
+}
+
+.items-container div:first-of-type {
+    border-top: 1px solid #707070;
+}
+
+.items-container button {
+    background-color: #fff;
+    padding: 20px;
+    border: 0;
+    border-left: 1px solid #707070;
+    cursor: pointer;
+}
+
+.items-container button:hover {
+    background-color: #76E1A0;
+}

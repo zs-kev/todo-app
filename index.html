@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Todo</h1>
+            <p>The super simple todo app</p>
+        </header>
+        <section class="input-container">
+            <div>
+                <label for="inputTodo">Add Item</label>
+                <input type="text" name="inputTodo" id="todoInput" placeholder="Type todo here...">
+                <button type="button" type="submit" id="addButton">Add</button>
+            </div>
+        </section>
+        <section class="items-container">
+            <ul id="list">
+                <div>
+                    <li>This is a todo item</li>
+                    <button>Done</button><button>Delete</button>
+                </div>
+                <div>
+                    <li>This is a todo item</li>
+                    <button>Done</button><button>Delete</button>
+                </div>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
