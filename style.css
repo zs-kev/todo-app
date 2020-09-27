@@ -102,3 +102,14 @@ li {
 .items-container button:hover {
     background-color: #76E1A0;
 }
+
+.complete {
+    text-decoration: line-through;
+    color: #707070;
+}
+
+.remove {
+    transition: 0.3s ease-in-out;
+    transform: translateX(-100px);
+    opacity: 0;
+}
