@@ -94,6 +94,7 @@ li {
 .items-container button {
     background-color: #fff;
     padding: 20px;
+	height: 100%;
     border: 0;
     border-left: 1px solid #707070;
     cursor: pointer;
@@ -101,4 +102,24 @@ li {
 
 .items-container button:hover {
     background-color: #76E1A0;
+}
+
+.items-container .undo:hover {
+    background-color: #000;
+}
+
+.complete {
+    text-decoration: line-through;
+    color: #707070;
+}
+
+.remove {
+    transition: 0.3s ease-in-out;
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+img {
+	width: 70%;
+	pointer-events: none;
 }
