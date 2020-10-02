@@ -11,7 +11,15 @@ const doneDelete = (event) => {
 	if(item.classList[0] === 'delete') {
 		const todo = item.parentElement;
 		todo.classList.add('remove');
-		storage(todo.children[0].innerHTML, 'REMOVE');
+		
+		switch(item.previousSibling.classList[0]) {
+			case 'done':
+				storage(todo.children[0].innerHTML, 'REMOVE');
+				break;
+			default:
+				storage(todo.children[0].innerHTML, 'REMOVE_COMPLETE');
+		}
+		
 		todo.addEventListener('transitionend', () => {
 			todo.remove();
 		})

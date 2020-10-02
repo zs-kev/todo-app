@@ -15,24 +15,31 @@ const storage = (todo, action) => {
 		completedTodos = JSON.parse(localStorage.getItem('completedTodos'));
 	}
 	
-	if(action === 'ADD') {
-		todos.push(todo);	
-		localStorage.setItem('todos', JSON.stringify(todos));
-	} else if(action === 'REMOVE') {
-		todos.splice(todos.indexOf(todo), 1);
-		localStorage.setItem('todos', JSON.stringify(todos));
-		completedTodos.splice(todos.indexOf(todo), 1);
-		localStorage.setItem('completedTodos', JSON.stringify(completedTodos));
-	} else if(action === 'COMPLETE') {
-		completedTodos.push(todo); 
-		localStorage.setItem('completedTodos', JSON.stringify(completedTodos));
-		todos.splice(todos.indexOf(todo), 1);
-		localStorage.setItem('todos', JSON.stringify(todos));
-	} else if(action === 'UNDO') {
-		todos.push(todo);
-		localStorage.setItem('todos', JSON.stringify(todos));
-		completedTodos.splice(completedTodos.indexOf(todo), 1);
-		localStorage.setItem('completedTodos', JSON.stringify(completedTodos));
+	switch(action) {
+		case 'ADD':
+			todos.push(todo);	
+			localStorage.setItem('todos', JSON.stringify(todos));
+			break;
+		case 'REMOVE':
+			todos.splice(todos.indexOf(todo), 1);
+			localStorage.setItem('todos', JSON.stringify(todos));
+			break;
+		case 'REMOVE_COMPLETE':
+			completedTodos.splice(completedTodos.indexOf(todo), 1);
+			localStorage.setItem('completedTodos', JSON.stringify(completedTodos));
+			break;
+		case 'COMPLETE':
+			completedTodos.push(todo); 
+			localStorage.setItem('completedTodos', JSON.stringify(completedTodos));
+			todos.splice(todos.indexOf(todo), 1);
+			localStorage.setItem('todos', JSON.stringify(todos));
+			break;
+		case 'UNDO':
+			todos.push(todo);
+			localStorage.setItem('todos', JSON.stringify(todos));
+			completedTodos.splice(completedTodos.indexOf(todo), 1);
+			localStorage.setItem('completedTodos', JSON.stringify(completedTodos));
+			break;
 	}
 		
 }
