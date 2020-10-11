@@ -1,1 +1,1 @@
-<a href="https://zs-kev.github.io/todo-app/">View a working demo here</a>
+<a href="https://zs-kev.github.io/todo-app/" target="_blank">View a working demo here</a>
